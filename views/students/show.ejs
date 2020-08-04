@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student REST API</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body class="bg-success">
+    <div class="container">
+        <h3><a href="/students">Student List</a></h3>
+        <h1>Student Details</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td><%= student.name %></td>
+                </tr>
+                <tr>
+                        <td>Address</td>
+                        <td>:</td>
+                        <td><%= student.address %></td>
+                </tr>
+                <tr>
+                        <td>Batch</td>
+                        <td>:</td>
+                        <td><%= student.batch %></td>
+                </tr>
+                <tr>
+                        <td>Work Experience</td>
+                        <td>:</td>
+                        <td><%= student.work_Experience %>/year</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <h3><a href="/students/edit/<%= student._id%>">EDIT</a></h3>
+        <form action="/students/delete/<%= student._id%>" method="post">
+            <button type="submit">DELETE</button>
+        </form>
+    </div>
+
+</body>
+</html>

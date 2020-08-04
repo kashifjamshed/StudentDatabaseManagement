@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Students</title>
+        <link rel='stylesheet' href=''><link>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/students">Student List</a></h3>
+            <h1>Edit Student</h1>
+            <form action="/students/update/<%= student._id%>" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" name="name" value="<%= student.name %>" /></td>
+                        </tr>
+                        <tr>
+                                <td>Address</td>
+                                <td><textarea name="address"><%= student.address %></textarea></td>
+                        </tr>
+                        <tr>
+                                <td>Batch</td>
+                                <td><input type="text" name="batch" value="<%= student.batch %>" /></td>
+                        </tr>
+                        <tr>
+                                <td>Work Experience</td>
+                                <td><input type="number" name="work_Experience" value="<%= student.work_Experience %>" /></td>
+                        </tr>
+                        <tr>
+                                <td colspan="2"><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

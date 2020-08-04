@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Student</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div class="container">
+        <h3>
+            <a href="/students">Student List</a>
+        </h3>
+        <h1>Form for creating new student</h1>
+        <!-- The below form action amd method="post" is so important as without it, my save button was not posting to the database  -->
+        <form action="/students/save" method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textArea name="address"></textArea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch</td>
+                    <td>
+                        <input type="text" name="batch">
+                    </td>
+                    <tr>
+                        <td>Work work_Experience</td>
+                        <td>
+                            <input type="number" name="work_Experience" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit">Save</button>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
